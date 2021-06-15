@@ -111,6 +111,33 @@ define([
                     }
                 };
             }
+            if (options.views.timelineWeekly) {
+                options.views.timelineWeekly = {
+                    eventLimit: options.views.timelineWeekly.eventLimit,
+                    type: "timeline",
+                    duration: {
+                        weeks: 1
+                    }
+                };
+            }
+            if (options.views.timelineMonthly) {
+                options.views.timelineMonthly = {
+                    eventLimit: options.views.timelineMonthly.eventLimit,
+                    type: "timeline",
+                    duration: {
+                        months: 1
+                    }
+                };
+            }
+            if (options.views.timelineYearly) {
+                options.views.timelineYearly = {
+                    eventLimit: options.views.timelineThreeDays.eventLimit,
+                    type: "timeline",
+                    duration: {
+                        years: 1
+                    }
+                };
+            }
             options.resources = [];
             options.resourceLabelText = this.resourceLabelText;
             options.schedulerLicenseKey = this.schedulerLicenseKey;
